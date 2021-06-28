@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+@import "colorui/animation.wxss";
+@import "css/animation.wxss";
+
+.f-pf {position: fixed;}
+.f-pa {position: absolute;}
+.f-pr {position: relative;}
+.f-oh {overflow: hidden;}

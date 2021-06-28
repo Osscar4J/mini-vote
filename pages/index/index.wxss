@@ -1,0 +1,7 @@
+.container {
+  padding-top:400rpx;
+}
+.add-new {
+  bottom: 100rpx;
+  width: 100%;
+}

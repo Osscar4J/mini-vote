@@ -1,0 +1,27 @@
+<view>
+  <view wx:if="{{entity != null}}" class="animated zoomInDown">
+    <image class="banner" src="{{entity.cover}}"></image>
+  </view>
+  
+  <view class="cu-list menu-avatar">
+      <view class="bg-white padding-sm text-lg">{{entity.title}}</view>
+      <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{entity.user.avatar}});"></view>
+          <view class="content flex-sub">
+              <view class="text-grey">{{entity.user.nickname}}</view>
+              <view class="text-gray text-sm flex justify-between">
+                  {{entity.createTime}}
+                  <view class="text-gray text-sm">
+                      <text class="cuIcon-attentionfill margin-lr-xs"></text> 10
+                      <text class="cuIcon-appreciatefill margin-lr-xs"></text> 20
+                      <text class="cuIcon-messagefill margin-lr-xs"></text> 30
+                  </view>
+              </view>
+          </view>
+      </view>
+  </view>
+
+  <test></test>
+</view>
+
+

@@ -1,0 +1,29 @@
+<!--pages/user/user.wxml-->
+<view class="animation-fade">
+  <view class="f-pr">
+   <image src='/images/userbg.jpg' mode='widthFix' class='png' style='width:100%;'></image>
+   <view class="f-pa userinfo">
+    <view class="page-body-info text-center">
+      <view wx:if="{{userInfo != null}}">
+        <image class="userinfo-avatar round" src="{{userInfo.avatarUrl}}"></image>
+        <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+      </view>
+      <view wx:else bindtap="getUserInfo" class="userinfo-avatar round">获取头像</view>
+    </view>
+   </view>
+  </view>
+  <view class="cu-list menu sm-border">
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-activity text-grey"></text>
+        <text class="text-grey">我发起的投票</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content">
+        <text class="cuIcon-text text-grey"></text>
+        <text class="text-grey">投票记录</text>
+      </view>
+    </view>
+  </view>
+</view>

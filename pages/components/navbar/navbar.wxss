@@ -1,0 +1,18 @@
+/* components/navbar.wxss */
+@import '../../../colorui/main.wxss';
+.navbar {
+  height: 180rpx;
+  width: 100%;
+  line-height: 180rpx;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 9;
+}
+.mg {
+  height: 180rpx;
+}
+.title {
+  max-width: 80%;
+  margin: auto;
+}

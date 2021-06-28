@@ -1,0 +1,7 @@
+/* pages/voteDetail/voteDetail.wxss */
+.bg-white {
+  background-color: #ffffff;
+}
+.banner {
+  width: 100%;
+}
