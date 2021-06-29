@@ -1,0 +1,14 @@
+<view>
+  <navbar title="{{entity.title}}" back="true"></navbar>
+  <view>
+    <view>
+      <image class="banner" src="{{entity.cover}}"></image>
+    </view>
+  </view>
+  <view class="cu-bar foot">
+    <view class="grid text-center col-2 w-100">
+      <view class="padding bg-blue text-xl"><icon class="cuIcon-attention"></icon> 预览</view>
+      <view class="padding bg-cyan text-xl"><icon class="{{true ? 'cuIcon-favor' : 'cuIcon-favorfill'}}"></icon> 收藏</view>
+    </view>
+  </view>
+</view>

@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/user/user",
     "pages/voteDetail/voteDetail",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/modal/modal"
   ],
   "window": {
     "navigationStyle": "custom",

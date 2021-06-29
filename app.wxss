@@ -8,3 +8,5 @@
 .f-pa {position: absolute;}
 .f-pr {position: relative;}
 .f-oh {overflow: hidden;}
+
+.w-100 { width: 100%; }

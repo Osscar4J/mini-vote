@@ -1,5 +1,5 @@
 <view class="bg-gradual-blue padding text-center shadow-blur navbar text-cut">
-    <view class="fl" wx:if="{{ back }}" catchtap="goback">返回</view>
+    <view class="fl" wx:if="{{ back }}" catchtap="goback"><text class="cuIcon-back"></text> 返回</view>
     <view class="text-lg title">{{title}}</view>
 </view>
 <view class="mg"></view>

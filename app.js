@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    vote: null
+    currentEntity: null
   }
 })

@@ -1,0 +1,4 @@
+/* pages/modal/modal.wxss */
+.banner {
+  width: 100%;
+}

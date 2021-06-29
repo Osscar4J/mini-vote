@@ -1,4 +1,5 @@
 // pages/home/home.js
+const app = getApp()
 let col1H = 0;let col2H = 0;
 
 Page({
@@ -82,18 +83,18 @@ Page({
 
   loadImages: function () {
     let images = [
-        { title: "拜登下令空袭伊拉克叙利亚边境", pic: "https://cdn6-banquan.ituchong.com/weili/l/920164728538267704.webp", height: 0 },
-        { title: "有相关信息", pic: "https://cdn3-banquan.ituchong.com/weili/l/915523217510629406.webp", height: 0 },
-        { title: "蒙能集团金山热电志愿服务队", pic: "https://cdn6-banquan.ituchong.com/weili/l/902862504321744954.webp", height: 0 },
-        { title: "土右旗工信局志愿服务队", pic: "https://cdn3-banquan.ituchong.com/weili/l/1002265175989157900.webp", height: 0 },
-        { title: "红旗小学七色光志愿服务队", pic: "https://cdn.wallpaper.com/main/styles/responsive_1680w_scale/s3/2021/06/305387_2020_honda_e.jpg", height: 0 },
-        { title: "兴安盟群众艺术馆文化志愿者", pic: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/113846_hondaurbanevconceptunveiledatthefrankfurtmotorshow.jpg?itok=qaQ2pJqU", height: 0 },
-        { title: "呼和浩特市社会化教育研究会", pic: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/305407_2020_honda_e.jpg?itok=SmxASoM3", height: 0 },
-        { title: "准格尔旗文化馆“星光”志愿", pic: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/305412_2020_honda_e.jpg?itok=Xb4-6w7y", height: 0 },
-        { title: "俄罗斯MMA拳手走进军营，一个干翻十几个特种兵", pic: "https://hbimg.huabanimg.com/0fc451b0a633f0fcda0565fbe5a963172795886137dcf-AmSFUR_fw658/format/webp", height: 0 },
-        { title: "今天起中国邮政全面提速", pic: "https://hbimg.huabanimg.com/ea5ad14f6c4c9804d082fe4b43d8e4f51a5491151d3884-aQRAqZ_fw658/format/webp", height: 0 },
-        { title: "开飞机的小姐姐", pic: "https://hbimg.huabanimg.com/549fd059baf29658b69aff6b275425d1980b35d220a98-GwaLwU_fw658/format/webp", height: 0 },
-        { title: "美国西北部43℃高温天气创纪录", pic: "https://hbimg.huabanimg.com/da33a926bcb1534fe5c2a97f14f489d856578b65111bc-jdKQkU_fw658/format/webp", height: 0 },
+        { title: "拜登下令空袭伊拉克叙利亚边境", cover: "https://cdn6-banquan.ituchong.com/weili/l/920164728538267704.webp", height: 0 },
+        { title: "有相关信息", cover: "https://cdn3-banquan.ituchong.com/weili/l/915523217510629406.webp", height: 0 },
+        { title: "蒙能集团金山热电志愿服务队", cover: "https://cdn6-banquan.ituchong.com/weili/l/902862504321744954.webp", height: 0 },
+        { title: "土右旗工信局志愿服务队", cover: "https://cdn3-banquan.ituchong.com/weili/l/1002265175989157900.webp", height: 0 },
+        { title: "红旗小学七色光志愿服务队", cover: "https://cdn.wallpaper.com/main/styles/responsive_1680w_scale/s3/2021/06/305387_2020_honda_e.jpg", height: 0 },
+        { title: "兴安盟群众艺术馆文化志愿者", cover: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/113846_hondaurbanevconceptunveiledatthefrankfurtmotorshow.jpg?itok=qaQ2pJqU", height: 0 },
+        { title: "呼和浩特市社会化教育研究会", cover: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/305407_2020_honda_e.jpg?itok=SmxASoM3", height: 0 },
+        { title: "准格尔旗文化馆“星光”志愿", cover: "https://cdn.wallpaper.com/main/styles/responsive_1460w_scale/s3/305412_2020_honda_e.jpg?itok=Xb4-6w7y", height: 0 },
+        { title: "俄罗斯MMA拳手走进军营，一个干翻十几个特种兵", cover: "https://hbimg.huabanimg.com/0fc451b0a633f0fcda0565fbe5a963172795886137dcf-AmSFUR_fw658/format/webp", height: 0 },
+        { title: "今天起中国邮政全面提速", cover: "https://hbimg.huabanimg.com/ea5ad14f6c4c9804d082fe4b43d8e4f51a5491151d3884-aQRAqZ_fw658/format/webp", height: 0 },
+        { title: "开飞机的小姐姐", cover: "https://hbimg.huabanimg.com/549fd059baf29658b69aff6b275425d1980b35d220a98-GwaLwU_fw658/format/webp", height: 0 },
+        { title: "美国西北部43℃高温天气创纪录", cover: "https://hbimg.huabanimg.com/da33a926bcb1534fe5c2a97f14f489d856578b65111bc-jdKQkU_fw658/format/webp", height: 0 },
     ];
 
     let baseId = "img-" + (+new Date());
@@ -106,6 +107,17 @@ Page({
         loadingCount: images.length,
         images: images
     });
+  },
+
+  toModal: function(e){
+    app.globalData.currentEntity = {
+      id: e.currentTarget.dataset.id,
+      title: '开飞机的小姐姐',
+      cover: 'https://hbimg.huabanimg.com/549fd059baf29658b69aff6b275425d1980b35d220a98-GwaLwU_fw658/format/webp'
+    }
+    wx.navigateTo({
+      url: '../modal/modal',
+    })
   },
 
   /**
